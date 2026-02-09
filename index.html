@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- Header -->
+<nav>
+    <div class="nav-container">
+        <div class="links">
+            <div class="link"><a href="#">About</a></div>
+            <div class="link"><a href="#">Experience</a></div>
+            <div class="link"><a href="#">Education</a></div>
+            <div class="link"><a href="#">Projects</a></div>
+            <div class="link"><a href="#">Skills</a></div>
+            <div class="link"><a href="#">Contact</a></div>
+        </div>
+        <button 
+            class="menu-btn" 
+            aria-label="Open navigation menu"
+        >
+            <img src=".icons/hamburger.svg" alt="" width="12" height="12">
+        </button>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">About</a>
+                <a href="#">Experience</a>
+                <a href="#">Education</a>
+                <a href="#">Projects</a>
+                <a href="#">Skills</a>
+                <a href="#">Contact</a>
+                <button 
+                    class="close-btn" 
+                    aria-label="Close navigation menu"
+                >
+                    <img src=".icons/close.svg" alt="" width="12" height="12">
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Main -->
+<section>
+    <div class="main-container">
+        <div class="image">
+
+        </div>
+        <div class="content">
+            <h1 data-aos="fade-left">
+                Hi, there! I'm
+                <span>Tatyana</span>
+            </h1>
+            <div class="typewriter">
+                I'm a 
+                <span class="typewriter-text"></span>
+                <label for=""></label>
+            </div>
+            <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About me section -->
+<section class="about" id="about">
+    <div class="content">
+        <div class="title"><span>About me</span></div>
+        <div class="about-details">
+            <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
+        </div>    
+    </div>
+</section>
+
+<section class="experience" id="experience">
+
+</section>
+
+<section class="education" id="education">
+
+</section>
+
+<section class="projects" id="project">
+    <div class="content">
+        <div class="title"><span>My Projects</span></div>
+        <div class="boxes">
+            <div class="box">
+                <div class="icon">
+                    <!-- add icon -->
+                </div>
+                <div class="topic">Web Development</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <!-- add icon -->
+                </div>
+                <div class="topic">Web Development</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="text">
+        <span>&#169; 2026</span> 
+        <!-- add links etc. per requirements -->
+    </div>
+</footer>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const closeBtn = document.querySelector('.close-btn');
+  const dropdown = document.querySelector('.dropdown');
+
+  menuBtn.addEventListener('click', () => {
+    dropdown.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      dropdown.classList.remove('active');
+    }
+  });
+</script>
+
+
+</body>
+</html>
