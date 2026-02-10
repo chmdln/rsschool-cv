@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
     <title>Document</title>
 </head>
 <body>
@@ -48,20 +49,19 @@
 <!-- Main -->
 <section>
     <div class="main-container">
-        <div class="image">
-
-        </div>
         <div class="content">
-            <h1 data-aos="fade-left">
-                Hi, there! I'm
-                <span>Tatyana</span>
+            <h1>
+                Hi, there! I'm Tatyana.
+                <div class="typewriter">
+                    I'm a
+                    <span class="typewriter-text"></span>
+                    <label for=""></label>
+                </div>
             </h1>
-            <div class="typewriter">
-                I'm a 
-                <span class="typewriter-text"></span>
-                <label for=""></label>
-            </div>
             <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
+        </div>
+        <div class="image">
+            <img src="images/avatar.png" alt="avatar" width="200px" height="200px">
         </div>
     </div>
 </section>
@@ -114,6 +114,8 @@
     </div>
 </footer>
 
+<!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script> AOS.init();</script> -->
 <script>
   const menuBtn = document.querySelector('.menu-btn');
   const closeBtn = document.querySelector('.close-btn');
@@ -132,6 +134,40 @@
       dropdown.classList.remove('active');
     }
   });
+
+// typewriter effect 
+const text = "software developer.";
+const typewriterText = document.querySelector(".typewriter-text");
+
+let index = 0;
+let isDeleting = false;
+let speed = 150;
+
+function type() {
+  if (!isDeleting) {
+    typewriterText.textContent = text.slice(0, index + 1);
+    index++;
+    if (index === text.length) {
+      isDeleting = true;
+      speed = 1000; // pause before deleting
+    } else {
+      speed = 150;
+    }
+  } else {
+    typewriterText.textContent = text.slice(0, index - 1);
+    index--;
+    if (index === 0) {
+      isDeleting = false;
+      speed = 500; // pause before typing again
+    } else {
+      speed = 100;
+    }
+  }
+  setTimeout(type, speed);
+}
+
+type();
+
 </script>
 
 

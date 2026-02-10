@@ -8,8 +8,16 @@
 }
 
 body {
-    background-color: white; 
-    overflow-x: hidden;
+  min-height: 100vh;
+  background: linear-gradient(
+    120deg,
+    #7a63d2,
+    #a387dd,
+    #d3a4c9,
+    #f0c3b2
+  );
+  color: white;
+  overflow-x: hidden;
 }
 
 nav {
@@ -28,7 +36,8 @@ nav {
 
 .nav-container .links {
     pointer-events: auto;
-    color: rgb(32, 32, 159);
+    /* color: rgb(32, 32, 159); */
+    /* color: rgb(255, 255, 255);  */
     font-weight: bold; 
     display: flex; 
     flex-wrap: wrap; 
@@ -37,7 +46,8 @@ nav {
 }
 
 .nav-container .links .link a {
-    color: rgb(44, 44, 216);       
+    /* color: rgb(44, 44, 216);        */
+    color: rgb(255, 255, 255); 
     font-weight: 700;
     font-size: 16px;
     padding: 6px 12px;
@@ -72,9 +82,50 @@ nav {
     display: block;
 }
 
+.section {
+    width: 100%;
+    min-height: 90vh;
+}
+
+.section .main-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    /* padding-left: 100px;  */
+}
+
+.main-container {
+    display: flex;                
+    justify-content: flex-start; 
+    align-items: center;          
+    padding: 60px 50px;  
+    flex-wrap: wrap;      
+}
+
+.main-container .content {
+    flex: 50%; 
+    color: white; 
+    max-width: 500px; 
+}
+
+.main-container .image {
+    width: 100%;
+    max-width: 200px;   
+    height: auto;       
+    border-radius: 50%; 
+    overflow: hidden;
+}
+
+
+
+
 
 /* mobile menu */
 @media screen and (max-width: 768px) {
+
+    .main-container {
+        flex-direction: column;
+    }
 
     /* hide normal navbar links */
     .nav-container > .links {
@@ -115,8 +166,13 @@ nav {
     .dropdown .links a:hover {
         background: rgba(255,255,255,0.1);
     }
+
+    .main-container {
+        padding: 20px 25px; 
+    }
+
+    .main-container h1, 
+    .main-container .typewriter {
+        font-size: 24px;
+    }
 }
-
-
-
-
