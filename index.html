@@ -6,13 +6,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
     <title>Document</title>
 </head>
 <body>
 <!-- Header -->
-<nav>
+<nav id="home">
     <div class="nav-container">
         <div class="links">
             <div class="link"><a href="#">About</a></div>
@@ -26,7 +31,7 @@
             class="menu-btn" 
             aria-label="Open navigation menu"
         >
-            <img src=".icons/hamburger.svg" alt="" width="12" height="12">
+            <img src="icons/hamburger.svg" alt="" width="12" height="12">
         </button>
         <div class="dropdown">
             <div class="links">
@@ -40,12 +45,59 @@
                     class="close-btn" 
                     aria-label="Close navigation menu"
                 >
-                    <img src=".icons/close.svg" alt="" width="12" height="12">
+                    <img src="icons/close.svg" alt="" width="12" height="12">
                 </button>
             </div>
         </div>
     </div>
 </nav>
+<!-- Sidebar  -->
+<nav class="sidebar">
+  <ul>
+    <li>
+        <a href="#home" class="sidebar-link active" aria-label="Home">
+            <img src="icons/home.svg" alt="Home Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#about" class="sidebar-link" aria-label="About">
+            <img src="icons/user.svg" alt="About Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#experience" class="sidebar-link" aria-label="Experience">
+            <img src="icons/briefcase.svg" alt="Experience Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#education" class="sidebar-link" aria-label="code-sample">
+            <img src="icons/education.svg" alt="Education Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#projects" class="sidebar-link" aria-label="Projects">
+            <img src="icons/project.svg" alt="Projects Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#skills" class="sidebar-link" aria-label="Skills">
+            <img src="icons/skills.svg" alt="Skills Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#code" class="sidebar-link" aria-label="code-sample">
+            <img src="icons/code.svg" alt="Code Icon">
+        </a>
+    </li>
+    <li>
+        <a href="#contact" class="sidebar-link" aria-label="contact">
+            <img src="icons/contact.svg" alt="Contact Icon">
+        </a>
+    </li>
+    
+  </ul>
+</nav>
+
 <!-- Main -->
 <section>
     <div class="main-container">
@@ -58,7 +110,7 @@
                     <label for=""></label>
                 </div>
             </h1>
-            <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
+            <p style="color: rgb(55, 54, 54); font-weight: 600">I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
         </div>
         <div class="image">
             <img src="images/avatar.png" alt="avatar" width="200px" height="200px">
@@ -69,42 +121,96 @@
 <!-- About me section -->
 <section class="about" id="about">
     <div class="content">
-        <div class="title"><span>About me</span></div>
+        <div class="title"><h2>About Me</h2></div>
         <div class="about-details">
-            <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications.</p>
+            <p>I'm a full-stack developer with a passion for creating user-friendly and visually appealing full-stack applications. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>    
     </div>
 </section>
 
 <section class="experience" id="experience">
-
+    <div class="content">
+        <div class="title"><h2>Professional Experience</h2></div>
+        <div class="experience-details">
+            <div class="experience-header">
+                <img src="icons/location.svg" alt="" width="30" height="30">
+                <div>SMART DEREK LLC &nbsp &nbsp</div>
+                <div>Astana, Kazakhstan</div>
+            </div>
+            <div class="experience-role">
+                <span>Full-stack developer</span>
+                <span>May 2025 - Present</span>
+            </div>
+        </div> 
+        <div class="experience-details">
+            <div class="experience-header">
+                <img src="icons/location.svg" alt="" width="30" height="30">
+                <div>UNEPRO &nbsp &nbsp</div>
+                <div>Boston, USA</div>
+            </div>
+            <div class="experience-role">
+                <span>Software Engineer Intern</span>
+                <span>December 2023 - June 2024</span>
+            </div>
+        </div> 
+        <div class="experience-details">
+            <div class="experience-header">
+                <img src="icons/location.svg" alt="" width="30" height="30">
+                <div>Corteva Inc. &nbsp &nbsp</div>
+                <div>Des Moines, USA</div>
+            </div>
+            <div class="experience-role">
+                <span>Data Engineer Intern</span>
+                <span>June 2018 - December 2018</span>
+            </div>
+        </div> 
+    </div>
 </section>
 
-<section class="education" id="education">
+<section class="code" id="code">
+  <div class="content">
+    <div class="title"><h2>Code Sample</h2></div>
+    <pre><code class="language-js">
+        // Reverse a portion of a string
+        function reverseString(st, a, b) {
+            let chars = st.split("");
+            while (a < b) {
+                const temp = chars[a];
+                chars[a] = chars[b];
+                chars[b] = temp;
 
+                a++;
+                b--;
+            }
+            return chars.join("");
+        }
+    </code></pre>
+  </div>
 </section>
 
-<section class="projects" id="project">
+
+<section class="education" id="education"></section>
+<!-- <section class="projects" id="project">
     <div class="content">
         <div class="title"><span>My Projects</span></div>
         <div class="boxes">
             <div class="box">
                 <div class="icon">
-                    <!-- add icon -->
+
                 </div>
                 <div class="topic">Web Development</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
             <div class="box">
                 <div class="icon">
-                    <!-- add icon -->
+
                 </div>
                 <div class="topic">Web Development</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Footer -->
 <footer>
@@ -167,6 +273,27 @@ function type() {
 }
 
 type();
+
+// sidebar 
+const sections = document.querySelectorAll("section");
+const sidebarLinks = document.querySelectorAll(".sidebar-link");
+
+function onScroll() {
+  let scrollPos = window.scrollY || window.pageYOffset;
+
+  sections.forEach((section, index) => {
+    const top = section.offsetTop - 100; // Adjust offset for header height if any
+    const bottom = top + section.offsetHeight;
+
+    if (scrollPos >= top && scrollPos < bottom) {
+      sidebarLinks.forEach(link => link.classList.remove("active"));
+      sidebarLinks[index].classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", onScroll);
+
 
 </script>
 
