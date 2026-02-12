@@ -116,7 +116,7 @@ nav {
 }
 
 .about, .experience, 
-.code {
+.education, .code {
     width: 100%;
     /* min-height: 90vh; */
     padding: 20px 300px;
@@ -142,30 +142,39 @@ nav {
     border-radius: 2px;           /* optional: rounded edges */
 }
 
-.experience-details {
+.experience-details, 
+.education-details {
     /* margin-bottom: 40px; */
-    padding: 15px 0;                 /* space around each item */
+    padding: 12px 0;                 /* space around each item */
     border-bottom: 1px solid rgba(142, 142, 144, 0.5); /* thin light line */
 }
 
 /* Remove border for last experience-details */
-.experience-details:last-child {
+.experience-details:last-child,
+.education-details:last-child {
     border-bottom: none;
 }
 
-
-.experience-details img {
+.experience-details img, 
+.education-details img {
     margin-left: -6px; 
 }
 
-.experience-header {
-    display: flex;
+.experience-header, 
+.education-header {
+    display: inline-flex;
     justify-content: flex-start;
     align-items: center;
     column-gap: 10px;
+    padding: .2rem 1rem; 
+    border-radius: 8px; 
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
 }
 
-.experience-role {
+.experience-role, 
+.education-main {
     display: flex; 
     width: 100%; 
     justify-content: space-between;
@@ -226,9 +235,6 @@ section > .content {
 .code pre[class*="language-"] .token.symbol {
   color: #4a4a4a !important; 
 }
-/* .code pre[class*="language-"] .token.plain,
-.code pre[class*="language-"] .token.punctuation,
-.code pre[class*="language-"] .token.property, */
 
 
 /* Sidebar */
