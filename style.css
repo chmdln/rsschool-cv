@@ -180,6 +180,17 @@ nav {
     justify-content: space-between;
 }
 
+.certificate {
+    color: #6b6b6e; 
+}
+
+.certificate:hover {
+    color: white; 
+    opacity: .7; 
+    transition: all 0.9s ease;
+    transform: scale(1.01); 
+}
+
 
 /* project styles */
 .project-cards {
@@ -191,18 +202,18 @@ nav {
 }
 
 .project-card {
-  width: 320px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #6b6b6e;
-  opacity: .8;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+    width: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #6b6b6e;
+    opacity: .8;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  opacity: 1;
+   opacity: 1;
 }
 
 .project-thumbnail {
