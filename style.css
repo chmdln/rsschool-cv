@@ -116,7 +116,7 @@ nav {
 }
 
 .about, .experience, 
-.education, .code {
+.education, .projects, .code {
     width: 100%;
     /* min-height: 90vh; */
     padding: 20px 300px;
@@ -179,6 +179,63 @@ nav {
     width: 100%; 
     justify-content: space-between;
 }
+
+
+/* project styles */
+.project-cards {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    column-gap: 2rem;
+    row-gap: 1rem; 
+}
+
+.project-card {
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #6b6b6e;
+  opacity: .8;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  opacity: 1;
+}
+
+.project-thumbnail {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover 
+.project-thumbnail {
+  transform: scale(1.08);
+}
+
+#social-thumbnail {
+  background-size: contain; 
+}
+
+.project-info {
+  padding: 14px 20px;
+}
+
+.project-info h4 {
+  margin: 0;
+  color: white;
+}
+
+.project-info p {
+  color: #aaa;
+  margin: 8px 0 16px;
+}
+
+
 
 /* section .content {
     border: 0.1px solid grey; 
